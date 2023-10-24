@@ -14,7 +14,6 @@ const ArticleCard = () => {
 
       const articles = await res.json();
       setArticles(articles);
-      console.log(articles.length);
     }
     loadArticles();
   }, []);

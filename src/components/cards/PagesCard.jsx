@@ -14,7 +14,6 @@ const PagesCard = () => {
 
       const pages = await res.json();
       setPages(pages);
-      console.log(pages.length);
     }
     loadPages();
   }, []);
