@@ -3,6 +3,7 @@ import SidebarMenu from './components/SidebarMenu';
 import { Row, Col } from 'react-bootstrap';
 import ComponentContainer from './components/ComponentContainer';
 import ArticleCard from './components/cards/ArticleCard';
+import PagesCard from './components/cards/PagesCard';
 
 const App = () => {
   return (
@@ -15,6 +16,9 @@ const App = () => {
         <Row>
           <Col md={6}>
             <ArticleCard />
+          </Col>
+          <Col md={6}>
+            <PagesCard />
           </Col>
         </Row>
       </ComponentContainer>
