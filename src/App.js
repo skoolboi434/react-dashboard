@@ -1,9 +1,25 @@
-function App() {
+import React from 'react';
+import SidebarMenu from './components/SidebarMenu';
+import { Row, Col } from 'react-bootstrap';
+import ComponentContainer from './components/ComponentContainer';
+import ArticleCard from './components/cards/ArticleCard';
+
+const App = () => {
   return (
-    <div className='dashboard-wrap'>
-      <h3>React Dashboard</h3>
+    <div className='dashboard-container'>
+      <SidebarMenu />
+      <ComponentContainer>
+        <div className='heading-container mb-3'>
+          <h3>Component Container</h3>
+        </div>
+        <Row>
+          <Col md={6}>
+            <ArticleCard />
+          </Col>
+        </Row>
+      </ComponentContainer>
     </div>
   );
-}
+};
 
 export default App;
