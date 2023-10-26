@@ -1,35 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCreativeCommonsRemix, FaThLarge, FaPaperPlane, FaNewspaper, FaSlidersH } from 'react-icons/fa';
+import { FaCreativeCommonsRemix, FaUser, FaPaperPlane, FaNewspaper, FaSlidersH } from 'react-icons/fa';
 
 const SidebarMenu = () => {
   return (
     <div className='sidebar'>
-      <div className='heading-container'>
-        <FaCreativeCommonsRemix />
-        <h3 className='heading'>Dashboard</h3>
-      </div>
-
-      <div className='nav-container'>
-        <ul>
-          <li>
-            <FaThLarge />
-            <Link to='/'>Dashboard</Link>
-          </li>
-          <li>
+      <div className='logo'></div>
+      <ul className='main-nav'>
+        <li className='active'>
+          <Link to='/'>
+            <FaCreativeCommonsRemix />
+            <span>Dashboard</span>
+          </Link>
+        </li>
+        <li>
+          <Link to='/'>
             <FaPaperPlane />
-            <Link to='/articles'>Articles</Link>
-          </li>
-          <li>
+            <span>Articles</span>
+          </Link>
+        </li>
+        <li>
+          <Link to='/'>
             <FaNewspaper />
-            <Link to='/pages'>Pages</Link>
-          </li>
-          <li>
+            <span>Pages</span>
+          </Link>
+        </li>
+        <li>
+          <Link to='/'>
+            <FaUser />
+            <span>Profile</span>
+          </Link>
+        </li>
+        <li>
+          <Link to='/'>
             <FaSlidersH />
-            <Link to='/settings'>Settings</Link>
-          </li>
-        </ul>
-      </div>
+            <span>Settings</span>
+          </Link>
+        </li>
+        <li className='logout'>
+          <Link to='/'>
+            <FaSlidersH />
+            <span>Logout</span>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
