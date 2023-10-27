@@ -7,9 +7,9 @@ const LoginScreen = () => {
     <div className='center'>
       <h1>Login</h1>
       <Form className='login-form'>
-        <Form.Group className='mb-3 input-field' controlId='email'>
-          <Form.Label>Email</Form.Label>
-          <Form.Control type='text' placeholder='Enter Email' required />
+        <Form.Group className='mb-3 input-field' controlId='username'>
+          <Form.Label>Username</Form.Label>
+          <Form.Control type='text' placeholder='Enter username' required />
         </Form.Group>
         <Form.Group className='mb-3 input-field' controlId='password'>
           <Form.Label>Password</Form.Label>

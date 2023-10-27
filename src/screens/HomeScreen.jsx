@@ -1,28 +1,17 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { FaSearch, FaPaperPlane, FaNewspaper } from 'react-icons/fa';
+import { FaPaperPlane, FaNewspaper } from 'react-icons/fa';
 import PageWrap from '../components/PageWrap';
 import SidebarMenu from '../components/SidebarMenu';
+import SearchBar from '../components/SearchBar';
+import PostsList from '../components/content/PostsList';
 
 const HomeScreen = () => {
   return (
     <>
-      <PageWrap>
+      <PageWrap title='React Dashboard || Dashboard'>
         <SidebarMenu />
         <div className='content-container'>
-          <div className='header-container'>
-            <div className='header-title'>
-              <span>Primary</span>
-              <h2>Dashboard</h2>
-            </div>
-            <div className='user-info'>
-              <div className='search-box'>
-                <FaSearch />
-                <input type='text' placeholder='Search...' />
-              </div>
-              <img src='https://placehold.co/400' alt='' />
-            </div>
-          </div>
+          <SearchBar title='Dashboard' />
           <div className='card-container'>
             <h3 className='main-title'>Today's Data</h3>
             <div className='card-wrapper'>
@@ -67,59 +56,7 @@ const HomeScreen = () => {
             </div>
           </div>{' '}
           {/* End Card Container */}
-          <div className='table-wrapper'>
-            <h3 className='heading'>Content Data</h3>
-            <div className='table-container'>
-              <table>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Publisher</th>
-                    <th>Status</th>
-                    <th>Date Added</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>123</td>
-                    <td></td>
-                    <td>Bills Hamlin will put the millions raised into his charity</td>
-                    <td>Times Leader</td>
-                    <td>Draft</td>
-                    <td>{new Date().toLocaleString()}</td>
-                    <td>
-                      <Button variant='primary'>Edit</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>231</td>
-                    <td></td>
-                    <td>Bills Hamlin will put the millions raised into his charity</td>
-                    <td>Times Leader</td>
-                    <td>Draft</td>
-                    <td>{new Date().toLocaleString()}</td>
-                    <td>
-                      <Button variant='primary'>Edit</Button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>123</td>
-                    <td></td>
-                    <td>Bills Hamlin will put the millions raised into his charity</td>
-                    <td>Times Leader</td>
-                    <td>Draft</td>
-                    <td>{new Date().toLocaleString()}</td>
-                    <td>
-                      <Button variant='primary'>Edit</Button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <PostsList />
         </div>
       </PageWrap>
     </>

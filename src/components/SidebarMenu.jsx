@@ -14,7 +14,7 @@ const SidebarMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to='/'>
+          <Link to='/articles'>
             <FaPaperPlane />
             <span>Articles</span>
           </Link>
@@ -39,7 +39,6 @@ const SidebarMenu = () => {
         </li>
         <li className='logout'>
           <Link to='/'>
-            <FaSlidersH />
             <span>Logout</span>
           </Link>
         </li>

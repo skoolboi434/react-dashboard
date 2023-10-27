@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const PageWrap = ({ children }) => {
-  return <div className='dashboard-container'>{children}</div>;
+const PageWrap = props => {
+  useEffect(() => {
+    document.title = `${props.title}`;
+    window.scrollTo(0, 0);
+  }, []);
+  return <div className='dashboard-container'>{props.children}</div>;
 };
 
 export default PageWrap;
