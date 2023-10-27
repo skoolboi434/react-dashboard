@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PageWrap = ({ children }) => {
-  return <div className='page-wrap'>{children}</div>;
+  return <div className='dashboard-container'>{children}</div>;
 };
 
 export default PageWrap;
